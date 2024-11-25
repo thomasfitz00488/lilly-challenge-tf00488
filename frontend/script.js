@@ -17,10 +17,12 @@ async function fetchData() {
         data.forEach((medicine) => {
             const row = document.createElement("tr");
             const name = document.createElement("td");
-            name.textContent = medicine.name || "N/A";
+            /*name.textContent = medicine.name || "N/A";*/
+            name.textContent = medicine.name;
             row.appendChild(name);
             const price = document.createElement("td");
-            price.textContent = medicine.price !== null ? `$${medicine.price.toFixed(2)}` : "N/A";
+            /*price.textContent = medicine.price !== null ? `$${medicine.price.toFixed(2)}` : "N/A";*/
+            price.textContent = medicine.price;
             row.appendChild(price)
             tblBody.appendChild(row);
 
